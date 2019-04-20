@@ -4,7 +4,7 @@
 #
 Name     : paho-mqtt
 Version  : 1.4.0
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/25/63/db25e62979c2a716a74950c9ed658dce431b5cb01fde29eb6cba9489a904/paho-mqtt-1.4.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/25/63/db25e62979c2a716a74950c9ed658dce431b5cb01fde29eb6cba9489a904/paho-mqtt-1.4.0.tar.gz
 Summary  : MQTT version 3.1.1 client class
