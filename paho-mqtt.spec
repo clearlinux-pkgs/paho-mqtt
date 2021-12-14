@@ -4,7 +4,7 @@
 #
 Name     : paho-mqtt
 Version  : 1.6.1
-Release  : 27
+Release  : 28
 URL      : https://files.pythonhosted.org/packages/f8/dd/4b75dcba025f8647bc9862ac17299e0d7d12d3beadbf026d8c8d74215c12/paho-mqtt-1.6.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f8/dd/4b75dcba025f8647bc9862ac17299e0d7d12d3beadbf026d8c8d74215c12/paho-mqtt-1.6.1.tar.gz
 Summary  : MQTT version 5.0/3.1.1 client class
