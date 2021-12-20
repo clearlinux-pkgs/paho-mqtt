@@ -4,7 +4,7 @@
 #
 Name     : paho-mqtt
 Version  : 1.6.1
-Release  : 28
+Release  : 29
 URL      : https://files.pythonhosted.org/packages/f8/dd/4b75dcba025f8647bc9862ac17299e0d7d12d3beadbf026d8c8d74215c12/paho-mqtt-1.6.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f8/dd/4b75dcba025f8647bc9862ac17299e0d7d12d3beadbf026d8c8d74215c12/paho-mqtt-1.6.1.tar.gz
 Summary  : MQTT version 5.0/3.1.1 client class
@@ -13,8 +13,6 @@ License  : BSD-3-Clause EPL-1.0
 Requires: paho-mqtt-license = %{version}-%{release}
 Requires: paho-mqtt-python = %{version}-%{release}
 Requires: paho-mqtt-python3 = %{version}-%{release}
-Requires: PySocks
-BuildRequires : PySocks
 BuildRequires : buildreq-distutils3
 
 %description
@@ -56,7 +54,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1636412513
+export SOURCE_DATE_EPOCH=1640036559
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -69,6 +67,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/paho-mqtt
+cp %{_builddir}/paho-mqtt-1.6.1/LICENSE.txt %{buildroot}/usr/share/package-licenses/paho-mqtt/b0db5f1de294650dfffeb15f53ebd59f29043c02
 cp %{_builddir}/paho-mqtt-1.6.1/edl-v10 %{buildroot}/usr/share/package-licenses/paho-mqtt/a8709c8c7e056d82845a30d21f075912aa8a0129
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
@@ -81,6 +80,7 @@ echo ----[ mark ]----
 %files license
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/paho-mqtt/a8709c8c7e056d82845a30d21f075912aa8a0129
+/usr/share/package-licenses/paho-mqtt/b0db5f1de294650dfffeb15f53ebd59f29043c02
 
 %files python
 %defattr(-,root,root,-)
